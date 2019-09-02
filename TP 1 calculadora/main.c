@@ -1,22 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "funciones.h"
 
-
-int sumar(int num1, int num2);
-int restar(int num1, int num2);
-int multiplicar(int num1, int num2);
-float Dividir (float num1, float num2);
 
 
 int main()
 {
     int valorA;
     int valorB;
-    int resultSuma;
-    int resulResta;
-    int resulMultipl;
+    int resultado;
+
     float resultDivision;
-    int resulFactorial;
+    float resulfactnum1;
+    float resultadofact2;
 
     int flagA=0;
     int flagB=0;
@@ -27,23 +23,8 @@ int main()
     do
     {
 
-        printf("BIENVENIDOS \n");
-
-        printf("Seleccione la opcion que desee \n");
-
-        printf("_______________________________\n\n");
-
-        printf("1)Ingresar el 1er operando \n", valorA);
-        printf("2)Ingresar el 2do operando \n", valorB );
-        printf("3)Calcular todas las operaciones\n");
-        printf("4)Informar resultados \n");
-        printf("5)Salir\n");
-        fflush(stdin);
+        mostrarMenu();
         scanf("%d",&opciones);
-
-
-
-
 
         switch(opciones)
         {
@@ -51,10 +32,7 @@ int main()
         case 1:
 
             flagA=1;
-            printf("Ingrese el primer operando\n");
-
-            fflush(stdin);
-            scanf("%d",&valorA);
+            valorA=pedirNumeroUno();
             printf("_________________________\n");
             printf("EL PRIMER NUMERO ES: %d\n",valorA);
             printf("_________________________\n");
@@ -65,9 +43,7 @@ int main()
         case 2:
 
             flagB=1;
-            printf("2) Ingresar el segundo operando\n");
-            fflush(stdin);
-            scanf("%d",&valorB);
+            valorB=pedirNumeroDos();
             printf("_________________________\n");
             printf("EL SEGUNDO NUMERO ES: %d\n",valorB);
             printf("_________________________\n");
@@ -80,14 +56,18 @@ int main()
         case 3:
             if(flagA==1 && flagB==1)
             {
-            resultSuma=sumar(valorA,valorB);
-            resulResta=restar(valorA,valorB);
-            resulMultipl=multiplicar(valorA,valorB);
+            resultado=sumar(valorA,valorB);
+            resultado=restar(valorA,valorB);
+            resultado=multiplicar(valorA,valorB);
             resultDivision=Dividir(valorA,valorB);
+            resulfactnum1=factorial(valorA);
+            resultadofact2=factorial(valorB);
+
+
             }
             else
             {
-                printf("Error, Ingrese un numero");
+                printf("Error, Ingrese los numeros antes de hacer los calculos \n");
 
             }
 
@@ -103,10 +83,12 @@ int main()
             printf("_________________________\n");
 
 
-            printf("El resultado de la suma es: %d\n",resultSuma);
-            printf("El resultado de la resta es: %d\n",resulResta);
-            printf("El resultado de la multiplicacion es: %d\n",resulMultipl);
+            printf("El resultado de la suma es: %d\n",sumar(valorA,valorB));
+            printf("El resultado de la resta es: %d\n",restar(valorA,valorB));
+            printf("El resultado de la multiplicacion es: %d\n",multiplicar(valorA,valorB));
             printf("El resultado de la division es: %2.f\n",resultDivision);
+            printf("El resultado del factorial del 1er num es: %2.f\n",resulfactnum1);
+            printf("El resultado del factorial del 2do num es: %2.f\n",resultadofact2);
 
             fflush(stdin);
 
@@ -125,31 +107,18 @@ int main()
     return 0;
 }
 
-int sumar(int num1, int num2)
+int pedirNumeroUno()
 {
-    int total;
-    total=num1+num2;
-    return total;
+    int numero;
+    printf("ingrese el primer numero: \n");
+    scanf("%d",&numero);
+    return numero;
 }
-int restar(int num1, int num2)
-{
-    int total;
-    total=num1-num2;
-    return total;
-}
-int multiplicar(int num1, int num2)
-{
-    int total;
-    total=num1*num2;
-    return total;
-}
-float Dividir (float num1, float num2)
-{
-    int total;
-    total=num1/num2;
-    return total;
-}
-int factorial (int num1, int num2)
-{
 
+int pedirNumeroDos ()
+{
+    int numero;
+    printf("ingrese el segundo numero: \n");
+    scanf("%d",&numero);
+    return numero;
 }
