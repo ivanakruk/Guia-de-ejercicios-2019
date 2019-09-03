@@ -31,6 +31,9 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="MostrarMenu.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="funciones.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -38,7 +41,7 @@
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="motrar resultado.c">
+		<Unit filename="pedirNumeros.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions>

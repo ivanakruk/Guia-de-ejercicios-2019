@@ -6,119 +6,123 @@
 
 int main()
 {
-    int valorA;
-    int valorB;
-    int resultado;
+    int valorA;  int valorB;  int resultadoS;  int resultadoR;   int resultadoM;   int opciones=0;
+    char seguir; int flagA=0; int flagB=0;     int flagCuentas=0;
 
-    float resultDivision;
-    float resulfactnum1;
-    float resultadofact2;
 
-    int flagA=0;
-    int flagB=0;
+    float resultDivision;  float resulfactnum1;  float resultadofact2;
 
-    int opciones=0;
-    char seguir;
-
+   mostrarMenu();
     do
     {
 
-        mostrarMenu();
+
+        elegirOpcion ();
         scanf("%d",&opciones);
 
         switch(opciones)
         {
 
-        case 1:
+            case 1:
 
-            flagA=1;
-            valorA=pedirNumeroUno();
-            printf("_________________________\n");
-            printf("EL PRIMER NUMERO ES: %d\n",valorA);
-            printf("_________________________\n");
-            fflush(stdin);
+                flagA=1;
+                valorA=pedirNumeroUno();
+                printf("EL PRIMER NUMERO ES: %d\n",valorA);
+                break;
+
+            case 2:
+
+                flagB=1;
+                valorB=pedirNumeroDos();
+                printf("EL SEGUNDO NUMERO ES: %d\n",valorB);
+                break;
+
+            case 3:
+                if(flagA==1 && flagB==1)
+                {
+                    resultadoS=sumar(valorA,valorB);
+                    resultadoR=restar(valorA,valorB);
+                    resultadoM=multiplicar(valorA,valorB);
+                    resultDivision=Dividir(valorA,valorB);
+                    resulfactnum1=factorial(valorA);
+                    resultadofact2=factorial(valorB);
+                }
+                else
+                {
+                    printf("Error, Ingrese los numeros antes de hacer los calculos \n");
+
+                }
+            printf("Calculos realizados..\n");
+            flagCuentas=1;
 
             break;
 
-        case 2:
+            case 4:
 
-            flagB=1;
-            valorB=pedirNumeroDos();
-            printf("_________________________\n");
-            printf("EL SEGUNDO NUMERO ES: %d\n",valorB);
-            printf("_________________________\n");
-            fflush(stdin);
+                if (flagCuentas==1)
+                    {
+                        printf("_________________________\n");
+                        printf("EL PRIMER NUMERO ES: %d\n",valorA);
+                        printf("EL SEGUNDO NUMERO ES: %d\n",valorB);
+                        printf("_________________________\n");
+                        printf("El resultado de la suma es: %d\n",resultadoS);
+                        printf("El resultado de la resta es: %d\n",resultadoR);
+                        printf("El resultado de la multiplicacion es: %d\n",resultadoM);
+
+                        if(valorB==0)
+                            {
+                                printf("No se puede divir por cero\n");
+                            }
+                            else
+                                {
+                                    printf("El resultado de la division es: %2.f\n",resultDivision);
+                                }
 
 
+                        if (valorA>=0)
+                            {
+                                printf("El resultado del factorial del 1er num es: %2.f\n",resulfactnum1);
+                            }
+                        else
+                            {
+                                if (valorA<0)
+                                    {
+                                    printf("No existe factorial negativo\n");
+                                    }
 
+                            }
+
+
+                        if (valorB>=0)
+                            {
+                                printf("El resultado del factorial del 1er num es: %2.f\n",resultadofact2);
+                            }
+                        else
+                            {
+                                if (valorB<0)
+                                    {
+                                    printf("No existe factorial negativo\n");
+                                    }
+
+                            }
+
+                    }
             break;
 
-        case 3:
-            if(flagA==1 && flagB==1)
-            {
-            resultado=sumar(valorA,valorB);
-            resultado=restar(valorA,valorB);
-            resultado=multiplicar(valorA,valorB);
-            resultDivision=Dividir(valorA,valorB);
-            resulfactnum1=factorial(valorA);
-            resultadofact2=factorial(valorB);
 
+            case 5:
 
-            }
-            else
-            {
-                printf("Error, Ingrese los numeros antes de hacer los calculos \n");
+                seguir='5';
+                break;
+
+            default:
+                printf("No ha elegido una opcion valida");
+                break;
 
             }
-
-
-
-        break;
-
-        case 4:
-
-            printf("_________________________\n");
-            printf("EL PRIMER NUMERO ES: %d\n",valorA);
-            printf("EL SEGUNDO NUMERO ES: %d\n",valorB);
-            printf("_________________________\n");
-
-
-            printf("El resultado de la suma es: %d\n",sumar(valorA,valorB));
-            printf("El resultado de la resta es: %d\n",restar(valorA,valorB));
-            printf("El resultado de la multiplicacion es: %d\n",multiplicar(valorA,valorB));
-            printf("El resultado de la division es: %2.f\n",resultDivision);
-            printf("El resultado del factorial del 1er num es: %2.f\n",resulfactnum1);
-            printf("El resultado del factorial del 2do num es: %2.f\n",resultadofact2);
-
-            fflush(stdin);
-
-
-        case 5:
-
-        seguir='5';
-        break;
-        }
-
-
 
     }while(seguir!='5');
 
 
     return 0;
-}
-
-int pedirNumeroUno()
-{
-    int numero;
-    printf("ingrese el primer numero: \n");
-    scanf("%d",&numero);
-    return numero;
-}
-
-int pedirNumeroDos ()
-{
-    int numero;
-    printf("ingrese el segundo numero: \n");
-    scanf("%d",&numero);
-    return numero;
 }
