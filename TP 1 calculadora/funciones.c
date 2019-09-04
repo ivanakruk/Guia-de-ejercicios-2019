@@ -19,17 +19,33 @@ int multiplicar(int num1, int num2)
 }
 float Dividir (int num1, int num2)
 {
-    return (float)num1/num2;
+    float total;
+    total=(float)num1/num2;
+    return total;
 }
 int factorial (int num)
 {
     int resultado;
 
-    if(num==1)
-        {
-        return 1;
+    if(num<0)
+    {
+        resultado=0;
+    }
+    else{
+
+        if(num==0)
+          {
+            resultado = 1;
+          }
+         else
+          {
+            resultado=num*(factorial(num-1));
+          }
+
         }
-   resultado=num*(factorial(num-1));
-   return resultado;
+       return resultado;
+
+
+
 }
 

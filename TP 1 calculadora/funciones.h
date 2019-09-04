@@ -5,6 +5,5 @@ int multiplicar(int num1, int num2);
 float Dividir (int num1, int num2);
 int factorial (int num1);
 void mostrarMenu();
-void elegirOpcion ();
 int pedirNumeroUno();
 int pedirNumeroDos ();

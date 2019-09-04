@@ -10,14 +10,15 @@ int main()
     char seguir; int flagA=0; int flagB=0;     int flagCuentas=0;
 
 
-    float resultDivision;  float resulfactnum1;  float resultadofact2;
+    float resultDivision;  int resulfactnum1;  int resultadofact2;
 
-   mostrarMenu();
+
     do
     {
 
+        mostrarMenu();
 
-        elegirOpcion ();
+
         scanf("%d",&opciones);
 
         switch(opciones)
@@ -75,34 +76,33 @@ int main()
                             }
                             else
                                 {
-                                    printf("El resultado de la division es: %2.f\n",resultDivision);
+                                    printf("El resultado de la division es: %.2f\n",resultDivision);
                                 }
 
 
-                        if (valorA>=0)
+                        if (valorA>0)
                             {
-                                printf("El resultado del factorial del 1er num es: %2.f\n",resulfactnum1);
+                                printf("El resultado del factorial del 1er num es: %d\n",resulfactnum1);
                             }
                         else
                             {
-                                if (valorA<0)
-                                    {
-                                    printf("No existe factorial negativo\n");
-                                    }
+
+                                printf("No existe factorial negativo\n");
+
 
                             }
 
 
-                        if (valorB>=0)
+                        if (valorB>0)
                             {
-                                printf("El resultado del factorial del 1er num es: %2.f\n",resultadofact2);
+                                printf("El resultado del factorial del 2do num es: %d\n",resultadofact2);
                             }
                         else
                             {
-                                if (valorB<0)
-                                    {
-                                    printf("No existe factorial negativo\n");
-                                    }
+
+
+                             printf("No existe factorial negativo\n");
+
 
                             }
 
@@ -113,6 +113,7 @@ int main()
             case 5:
 
                 seguir='5';
+                printf("El programa termino, hasta la proxima!!\n");
                 break;
 
             default:
@@ -120,6 +121,9 @@ int main()
                 break;
 
             }
+        system("pause");//El programa va esperar a que el usuario presione una tecla para continuar
+        system("cls");//Limpia la pantalla al elegir opciones y que no sue vaya acumulando todo el texto mientras se va ejecutando el programa
+
 
     }while(seguir!='5');
 
