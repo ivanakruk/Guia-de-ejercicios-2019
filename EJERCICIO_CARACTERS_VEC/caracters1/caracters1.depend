@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1568425861 source:d:\codetareas\otros\guia-de-ejercicios-2019-master\guia-de-ejercicios-2019-master\ejercicio_caracters_vec\caracters1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

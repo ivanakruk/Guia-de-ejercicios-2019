@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1568424213 source:d:\codetareas\otros\guia-de-ejercicios-2019-master\guia-de-ejercicios-2019-master\ejercicio de vectores alumnos\ejerciciovecalumnos\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Arrays.h"
+	"Inputs.h"
+	"InputsEstudiantes.h"
+
+1568251735 d:\codetareas\otros\guia-de-ejercicios-2019-master\guia-de-ejercicios-2019-master\ejercicio de vectores alumnos\ejerciciovecalumnos\arrays.h
+
+1568421544 d:\codetareas\otros\guia-de-ejercicios-2019-master\guia-de-ejercicios-2019-master\ejercicio de vectores alumnos\ejerciciovecalumnos\inputs.h
+
+1568421589 source:d:\codetareas\otros\guia-de-ejercicios-2019-master\guia-de-ejercicios-2019-master\ejercicio de vectores alumnos\ejerciciovecalumnos\arrays.c
+	<stdio.h>
+	<stdlib.h>
+	"Inputs.h"
+	"InputsEstudiantes.h"
+
+1568421588 source:d:\codetareas\otros\guia-de-ejercicios-2019-master\guia-de-ejercicios-2019-master\ejercicio de vectores alumnos\ejerciciovecalumnos\inputs.c
+	<stdio.h>
+	<stdlib.h>
+	"Arrays.h"
+	"InputsEstudiantes.h"
+
+1568422231 d:\codetareas\otros\guia-de-ejercicios-2019-master\guia-de-ejercicios-2019-master\ejercicio de vectores alumnos\ejerciciovecalumnos\inputsestudiantes.h
+
+1568423015 source:d:\codetareas\otros\guia-de-ejercicios-2019-master\guia-de-ejercicios-2019-master\ejercicio de vectores alumnos\ejerciciovecalumnos\inputsestudiantes.c
+	<stdio.h>
+	<stdlib.h>
+	"Arrays.h"
+	"Inputs.h"
+
