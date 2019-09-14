@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1568466551 source:c:\users\alumno\desktop\arrayscaracters\arrays.c
+	<stdio.h>
+	<stdlib.h>
+	"Inputs.h"
+
+1568438623 c:\users\alumno\desktop\arrayscaracters\inputs.h
+
+1568438623 source:c:\users\alumno\desktop\arrayscaracters\inputs.c
+	<stdio.h>
+	<stdlib.h>
+	"Arrays.h"
+	"InputsEstudiantes.h"
+
+1568438623 c:\users\alumno\desktop\arrayscaracters\arrays.h
+
+1568438623 c:\users\alumno\desktop\arrayscaracters\inputsestudiantes.h
+
+1568467637 source:c:\users\alumno\desktop\arrayscaracters\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Arrays.h"
+
+1568438623 source:c:\users\alumno\desktop\arrayscaracters\inputsestudiantes.c
+	<stdio.h>
+	<stdlib.h>
+	"Arrays.h"
+	"Inputs.h"
+
