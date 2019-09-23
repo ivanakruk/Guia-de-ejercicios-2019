@@ -1,0 +1,32 @@
+# depslib dependency file v1.0
+1568915520 source:c:\users\limonrosado\desktop\ejercicio de practica matrizalumnos\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Imputs-arrays.h"
+
+1568899602 source:c:\users\limonrosado\desktop\ejercicio de practica matrizalumnos\arrays.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+
+1568913411 source:c:\users\limonrosado\desktop\ejercicio de practica matrizalumnos\inputs-lab1-19.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"Imputs-arrays.h"
+
+1568915662 source:c:\users\limonrosado\desktop\ejercicio de practica matrizalumnos\cargardatosestudiantes.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"Imputs-arrays.h"
+
+1568913139 c:\users\limonrosado\desktop\ejercicio de practica matrizalumnos\imputs-arrays.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <string.h>
+/**
+ * \brief Solicita un número al usuario y devuelve el resultado
+ * \param mensaje Es el mensaje a ser mostrado
+ * \return El número ingresado por el usuario
+ *
+ */
+int getInt(char* mensaje)
+{
+    int auxiliar;
+    printf("%s",mensaje);
+    scanf("%d",&auxiliar);
+    return auxiliar;
+
+
+}
+
+void iniciarVecDatosAlumno(eDatosAlumno datosAlumno[], int limite, int valor)
+{
+    int i;
+    for(i=0; i<limite; i++)
+    {
+        datosAlumno[i].legajo=valor;//EL VECTOR DE DATOAS ALUMNOS(TODAS LAS POSICIONES VAN A ESTAR EN -1)
+    }
+}
